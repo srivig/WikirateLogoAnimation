@@ -1,7 +1,7 @@
 var s = Snap("#wl");
 var wrDot;
 var colors = ["#f78d1f", "#0081ba", "#ec4e50", "#079c8e", "#58595b"]
-var animateDuration = 2000;
+var animateDuration = 500;
 var r = 20;
 var inital_x = 150;
 var inital_y = 150;
@@ -39,16 +39,16 @@ function animateLogo(col, dist, part, order) {
       var cy = dist-50;
       wrDot[i][col].animate({
         cy: cy
-      }, animateDuration)
+      }, animateDuration,mina.easeInOutBack)
     } else if(part==2) {
       wrDot[order[i]][col].animate({
         cy: cy_coord
-      }, animateDuration)
+      }, animateDuration,mina.easeInOutBack)
       cy_coord += 50;
     } else {
       wrDot[i][col].animate({
         cy: cy_coord
-      }, animateDuration)
+      }, animateDuration,mina.easeInOutBack)
       cy_coord += 50;
     }
   }
